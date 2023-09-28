@@ -1,0 +1,256 @@
+/*==========Form===========*/
+.form {
+	&-input {
+		input {
+			display: block;
+			width: 100%;
+			padding: 9px 15px;
+			border-radius: 5px;
+			border: 1px solid $d-lgray;
+			box-shadow: none;
+			font-family: $ff;
+			font-size: 16px;
+			font-weight: 500;
+			color: $bl;
+			line-height: $lh5;
+			filter: drop-shadow(0 0 0 #fff);
+			appearance:none;
+			&::placeholder {
+				color: $gray2;
+				font-weight: 400;
+				opacity: 1;
+			}
+		}
+		&_range {
+			position: relative;
+			input {
+				padding-left: 45px;
+			}
+			label {
+				position: absolute;
+				top: 50%;
+				left: 15px;
+				transform: translateY(-50%);
+				font-family: $ff;
+				font-size: 16px;
+				font-weight: 500;
+				color: $gray2;
+				line-height: $lh5;
+			}
+		}
+		&.error {
+			position: relative;
+			padding-bottom: 10px;
+			input {
+				color: #DB0000;
+				border-color: #DB0000;
+			}
+			&:after {
+				content: "Введите данные";
+				font-size: 14px;
+				font-weight: 400;
+				color: #DB0000;
+				line-height: $lh;
+				font-family: $ff;
+				position: absolute;
+				left: 0;
+				bottom: -12px;
+				z-index: 1;
+			}
+		}
+	}
+	&-range {
+		position: relative;
+		width: 100%;
+		padding: 10px 0;
+		.range-wrapper {
+		  background: $d-lgray;
+		  padding-right: 7.5px;
+		  margin-bottom: 4px;
+		  position: relative;
+		  z-index: 3;
+		}
+		.range-wrapper.multirange {
+		  padding-left:7.5px;
+		}
+		.range-wrapper.multirange  .ui-slider .ui-slider-handle{
+		  margin-left: -7.5px;
+		}
+		.ui-widget.ui-widget-content {
+		  position: relative;
+		  height: 3px;
+		}
+		.ui-slider .ui-slider-handle {
+			height: 20px;
+			width: 20px;
+			border-radius: 50%;
+			background: $wh;
+			border: 3px solid $brown;
+			position: absolute;
+			margin-left: -2px;
+			top: -8px;
+		}
+		.ui-widget-header,
+		.ui-slider-range {
+		  height: 100%;
+		  border-radius: 33333px;
+		  background: $brown;
+		  position: absolute;
+		}
+	}
+	&-check {
+		max-width: 235px;
+		label {
+			display: flex;
+			align-items: center;
+			cursor: pointer;
+		}
+		&__box {
+			width: 20px;
+			height: 20px;
+			flex: 0 0 20px;
+			display: inline-block;
+			border: 1px solid $d-lgray;
+			background-color: $wh;
+			border-radius: 4px;
+			position: relative;
+			margin-right: 10px;
+			&:after {
+				content: "";
+				width: 16px;
+				height: 16px;
+				background: url("../images/check_wh.svg") center no-repeat;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				z-index: 1;
+			}
+		}
+		&__description {
+			flex: 1 1 auto;
+			font-family: $ff;
+			font-size: 16px;
+			font-weight: 400;
+			color: $lbl;
+			line-height: $lh;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			span {
+				&:nth-child(2) {
+					color: $gray2;
+					margin-left: 10px;
+				}
+			}
+		}
+		input {
+			display: none;
+			&:checked + label {
+				.form-check__box {
+					background-color: $brown;
+					border-color: $brown;
+				}
+			}
+		}
+	}
+}
+/*==========/form===========*/
+
+/*=========Subscribe========*/
+.subscribe {
+	&__title {
+		font-family: $ff;
+		font-size: 16px;
+		font-weight: 600;
+		color: $bl;
+		line-height: $lh5;
+		margin-bottom: 15px;
+	}
+	&__row {
+		display: flex;
+		margin-bottom: 10px;
+		.form-input {
+			margin-right: 10px;
+			input {
+				max-width: 200px;
+			}
+		}
+	}
+	&__description {
+		font-family: $ff;
+		font-size: 12px;
+		font-weight: 400;
+		line-height: 1.33;
+		color: $gray;
+		max-width: 362px;
+	}
+}
+/*=========/subscribe========*/
+
+/*=========Sort===========*/
+.sort {
+	display: flex;
+	align-items: center;
+	&__description {
+		font-family: $ff;
+		font-size: 14px;
+		font-weight: 400;
+		color: $gray;
+		line-height: $lh;
+		margin-right: 10px;
+	}
+	&__select {
+		position: relative;
+		select {
+			font-family: $ff;
+			font-size: 14px;
+			font-weight: 600;
+			color: $bl;
+			line-height: $lh;
+			appearance: none;
+			padding-right: 24px;
+			background-color: $wh;
+		}
+		&:after {
+			content: "";
+			width: 24px;
+			height: 24px;
+			background: url("../images/arrow-down.svg") center no-repeat;
+			position: absolute;
+			top: 50%;
+			right: 0;
+			z-index: 1;
+			transform: translateY(-50%);
+			z-index: 1;
+		}
+	}
+}
+/*=========/sort===========*/
+
+/*===========Adaptive========*/
+@media(max-width: 414px) {
+	.subscribe {
+		.btn {
+			font-size: 14px;
+			padding: 11.5px 5px;
+			flex: 1 1 auto;
+		}
+	}
+}
+
+@media(max-width: 360px) {
+	.subscribe {
+		.btn {
+			font-size: 12px;
+		}
+		.form-input {
+			input {
+				max-width: 180px;
+				font-size: 14px;
+				padding: 9px 10px;
+			}
+		}
+	}
+}
+/*===========/adaptive========*/

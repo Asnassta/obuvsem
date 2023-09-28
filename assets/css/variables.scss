@@ -1,0 +1,27 @@
+$ff: 'Montserrat', sans-serif;
+$lh: 1.428;
+$lh5: 1.5;
+$wh: #ffffff;
+$bl: #1A1818;
+$lbl: #323233;
+$brown: #785549;
+$orange: #F46210;
+$dgray: #383D48;
+$gray: #57585A;
+$gray2: #77787B;
+$gray3: #838582;
+$lgray: #F6F8F9;
+$d-lgray: #D9DADD;
+$s-gray: #E8E9ED;
+$green: #48A51D;
+$blue: #5781EE;
+$red: #F42929;
+$yellow: #EFAE07;
+
+
+$maxWidth: 1440;
+@mixin adaptive-font($pcSize, $mobSize) {
+ $addSize: $pcSize - $mobSize;
+ $maxWidth: $maxWidth - 375;
+ font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 375px) / #{$maxWidth}));
+}
