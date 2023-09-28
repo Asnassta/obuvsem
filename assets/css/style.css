@@ -3493,10 +3493,19 @@ body.hidden {
     margin: 0 auto 20px; }
   .product-box__col:nth-child(2) {
     width: 100%; }
-  .product-box-slider-nav img {
-    height: 90px; }
+  .product-box-slider-nav {
+    padding: 0 42px; }
+    .product-box-slider-nav img {
+      height: 90px; }
+    .product-box-slider-nav .slick-list {
+      margin-left: -10px; }
+    .product-box-slider-nav .slick-slide {
+      margin-left: 10px; }
   .product-box .mb-20 {
     margin-bottom: 15px; }
+  .slider-nav__arrow svg {
+    width: 32px;
+    height: 32px; }
   .brands {
     padding: 40px 0 20px; }
     .brands .section__header {

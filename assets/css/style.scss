@@ -1925,13 +1925,28 @@ body.hidden {
 			}
 			&-slider {
 				&-nav {
+					padding: 0 42px;
 					img {
 						height: 90px;
+					}
+					.slick-list {
+						margin-left: -10px;
+					}
+					.slick-slide {
+						margin-left: 10px;
 					}
 				}
 			}
 			.mb-20 {
 				margin-bottom: 15px;
+			}
+		}
+	}
+	.slider-nav {
+		&__arrow {
+			svg {
+				width: 32px;
+				height: 32px;
 			}
 		}
 	}
