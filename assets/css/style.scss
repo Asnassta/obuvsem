@@ -1732,8 +1732,18 @@ body.hidden {
 			}
 			&-slider {
 				&-nav {
+					padding: 0 42px;
 					img {
 						height: 70px;
+					}
+				}
+			}
+			.slider-nav {
+				&__arrow {
+					bottom: 19px;
+					svg {
+						width: 32px;
+						height: 32px;
 					}
 				}
 			}
@@ -1941,12 +1951,9 @@ body.hidden {
 				margin-bottom: 15px;
 			}
 		}
-	}
-	.slider-nav {
-		&__arrow {
-			svg {
-				width: 32px;
-				height: 32px;
+		.slider-nav {
+			&__arrow {
+				bottom: 29px;
 			}
 		}
 	}
@@ -2045,6 +2052,11 @@ body.hidden {
 						height: 70px;
 					}
 				}
+			}
+		}
+		.slider-nav {
+			&__arrow {
+				bottom: 19px;
 			}
 		}
 	}
