@@ -1,11 +1,9 @@
 function tabs(n)
 {
-	if ($(window).width() > 760) {
-   		$('.catalog .tabs-nav a').removeClass('active');
-		$('.catalog .tabs-nav a.t'+n).addClass('active');
-		$('.catalog .tabs-block').fadeOut(0);
-		$('.catalog .tabs-block.tab_'+n).fadeIn(222);
-	}
+   	$('.catalog .tabs-nav a').removeClass('active');
+	$('.catalog .tabs-nav a.t'+n).addClass('active');
+	$('.catalog .tabs-block').fadeOut(0);
+	$('.catalog .tabs-block.tab_'+n).fadeIn(222);
 };
 
 function tabsAbout(n)

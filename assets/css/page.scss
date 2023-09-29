@@ -348,6 +348,7 @@
 	background-color: $wh;
 	border-top: 1px solid $s-gray;
 	text-align: center;
+	box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.08);
 	.header__loc {
 		display: flex;
 		margin: 20px 0;
@@ -364,6 +365,7 @@
 	}
 	&__inner {
 		min-height: calc(100vh - 177px);
+		padding-bottom: 20px;
 	}
 	&__links {
 		border-top: 1px solid $s-gray;
@@ -688,6 +690,7 @@
 			//max-height: calc(100vh - 177px);
 			//overflow: auto;
 			border-top: 1px solid $s-gray;
+			box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.08);
 		}
 	}
 	.catalog {
@@ -695,28 +698,6 @@
 		min-height: calc(100vh - 177px);
 		&__category {
 			font-size: 16px;
-			&.active {
-				span {
-					color: $bl;
-				}
-				svg {
-					fill: $lbl;
-				}
-				&:after {
-					background: url("../images/chevron-right.svg") center no-repeat;
-				}
-			}
-			&:hover {
-				svg {
-					fill: $brown;
-				}
-				span {
-					color: $brown;
-				}
-				&:after {
-					background: url("../images/chevron-right_brown.svg") center no-repeat;
-				}
-			}
 		}
 		&__nav {
 			width: 100%;
@@ -724,7 +705,16 @@
 			padding: 0 15px;
 		}
 		&__block {
-			display: none;
+			padding: 0 15px;
+			
+		}
+		&__inner {
+			border-top: 1px solid #E8E9ED;
+			padding: 20px 0px;
+		}
+		&__name {
+			font-size: 16px;
+			margin-bottom: 10px;
 		}
 	}
 
@@ -769,6 +759,27 @@
 		}
 		&__link {
 			font-size: 12px;
+		}
+	}
+}
+
+@media(max-width: 414px) {
+	.catalog {
+		&__inner {
+			display: block;
+		}
+		&__col {
+			margin-right: 70px;
+		}
+		&__info {
+			margin-right: 0;
+			margin-bottom: 15px;
+		}
+		&__photo {
+			max-width: 100%;
+			img {
+				width: 100%;
+			}
 		}
 	}
 }

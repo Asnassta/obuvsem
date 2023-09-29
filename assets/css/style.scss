@@ -1293,6 +1293,7 @@ body.hidden {
 						width: 100%;
 						margin-left: 0;
 						display: flex;
+						margin-bottom: 30px;
 					}
 					&__view {
 						width: 200px;
@@ -1456,6 +1457,9 @@ body.hidden {
 			padding: 12px 10px;
 			flex: 1 1 auto;
 		}
+	}
+	&-card {
+		padding-bottom: 3px;
 	}
 }
 /*========/product=========*/
