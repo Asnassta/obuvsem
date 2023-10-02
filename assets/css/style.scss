@@ -4,6 +4,7 @@
 @import 'pages.scss';
 @import 'form.scss';
 @import 'filters.scss';
+@import 'popup.scss';
 
 /*========Reset========*/
 *{
@@ -258,7 +259,6 @@ body.hidden {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	text-align: center;
 	padding: 12px 15px;
 	border-radius: 5px;
 	border: 1px solid #D9DADD;
@@ -276,6 +276,9 @@ body.hidden {
 		stroke: $gray2;
 		margin-right: 10px;
 		transition: all .2s linear;
+	}
+	img {
+		margin-right: 10px;
 	}
 	&:hover {
 		@media(min-width: 1025px) {
@@ -297,6 +300,16 @@ body.hidden {
 					fill: $brown;
 				}
 			}
+		}
+	}
+	&_brown {
+		color: $brown;
+		font-size: 14px;
+		border-radius: 8px;
+		svg {
+			width: 24px;
+			height: 24px;
+			stroke: $brown;
 		}
 	}
 	&.open-filters {
@@ -920,6 +933,120 @@ body.hidden {
 			}
 		}
 	}/*==/product-box==*/
+	&-cart {
+		&__header {
+			display: flex;
+			background-color: #FAFAFA;
+			padding: 10px 20px 10px 30px;
+			font-family: $ff;
+			font-size: 14px;
+			font-weight: 500;
+			color: $gray2;
+			line-height: $lh;
+			.product-cart__col {
+				&:first-child {
+					padding-left: 15%;
+				}
+			}
+		}
+		&__content {
+			border-top: 1px solid $s-gray;
+		}
+		&__col {
+			margin-right: 35px;
+			&:first-child {
+				flex: 1 1 auto;
+				width: 46.5%;
+			}
+			&:nth-child(2) {
+				width: 75px;
+			}
+			&:nth-child(3) {
+				width: 114px;
+			}
+			&:nth-child(4) {
+				width: 90px;
+				margin-right: 30px;
+			}
+			&:nth-child(5) {
+				width: 70px;
+				margin-right: 0;
+			}
+		}
+		&__item {
+			padding: 20px 20px 20px 30px;
+			border: 1px solid $s-gray;
+			border-top: none;
+			display: flex;
+			align-items: center;
+			.product-cart__col {
+				&:first-child {
+					display: flex;
+				}
+			}
+		}
+		&__photo {
+			width: 30%;
+			max-width: 120px;
+			margin-right: 20px;
+			img {
+				width: 100%;
+				height: 100px;
+				object-fit: cover;
+				object-position: 50% 70%;
+				border-radius: 5px;
+			}
+		}
+		&__price {
+			font-family: $ff;
+			font-size: 16px;
+			font-weight: 600;
+			color: $bl;
+			line-height: $lh5;
+			&_sum {
+				font-size: 20px;
+			}
+		}
+		&__btns {
+			display: flex;
+		}
+		&__btn {
+			margin-right: 20px;
+			svg {
+				width: 24px;
+				height: 24px;
+				fill: none;
+				stroke: $gray;
+				transition: all .2s linear;
+			}
+			&:hover {
+				svg {
+					stroke: $brown;
+				}
+			}
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+		.product {
+			&-data {
+				font-size: 14px;
+				justify-content: flex-start;
+				&__content {
+					font-size: 14px;
+				}
+				&__description {
+					font-size: 14px;
+					margin-right: 5px;
+				}
+			}
+			&__availability {
+				span {
+					font-size: 14px;
+				}
+			}
+		}
+	}
 	&-color {
 		display: flex;
 		align-items: center;
@@ -1718,6 +1845,22 @@ body.hidden {
 				margin-bottom: 30px;
 			}
 		}
+		&-cart {
+			&__col {
+				margin-right: 20px;
+				&:nth-child(4) {
+					margin-right: 20px;
+				}
+			}
+			&__item {
+				padding-left: 20px;
+			}
+			&__price {
+				&_sum {
+					font-size: 18px;
+				}
+			}
+		}
 		&-box {
 			flex-wrap: wrap;
 			&__col {
@@ -1840,6 +1983,13 @@ body.hidden {
 				display: none;
 			}
 		}
+		&-cart {
+			&__photo {
+				img {
+					height: 70px;
+				}
+			}
+		}
 	}
 
 	.offers {
@@ -1925,6 +2075,39 @@ body.hidden {
 		}
 		&__btn-more {
 			margin-bottom: 30px;
+		}
+		&-cart {
+			&__header {
+				display: none;
+			}
+			&__item {
+				flex-wrap: wrap;
+			}
+			&__col {
+				&:first-child {
+					width: 100%;
+					margin-right: 0;
+					margin-bottom: 20px;
+					order: -1;
+				}
+				&:nth-child(2) {
+					display: none;
+				}
+				&:nth-child(5) {
+					order: -1;
+					flex: 1 1 auto;
+				}
+				&:nth-child(4) {
+					margin-right: 0;
+				}
+			}
+			&__photo {
+				min-width: 90px;
+				margin-right: 15px;
+				img {
+					height: 100px;
+				}
+			}
 		}
 		&-box {
 			&__col {
@@ -2094,6 +2277,28 @@ body.hidden {
 		}
 	}
 	.product {
+		&-cart {
+			.product__name {
+				font-size: 14px;
+			}
+			.product-data {
+				&__description, &__content {
+					font-size: 12px;
+				}
+			}
+			&__col {
+				&:nth-child(3) {
+					width: 87px;
+				}
+			}
+			.quantity {
+				padding: 6.5px 10px;
+				&__number {
+					font-size: 14px;
+					margin: 0 10px;
+				}
+			}
+		}
 		&-box {
 			&-slider {
 				&-for {
@@ -2133,6 +2338,22 @@ body.hidden {
 		&-box {
 			.btn {
 				font-size: 12px;
+			}
+		}
+		&-cart {
+			&__col {
+				margin-right: 10px;
+				&:nth-child(4) {
+					width: 70px;
+				}
+			}
+			&__price {
+				&_sum {
+					font-size: 14px;
+				}
+			}
+			&__btn {
+				margin-right: 10px;
 			}
 		}
 	}

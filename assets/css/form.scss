@@ -4,13 +4,13 @@
 		input {
 			display: block;
 			width: 100%;
-			padding: 9px 15px;
+			padding: 11px 15px;
 			border-radius: 5px;
 			border: 1px solid $d-lgray;
 			box-shadow: none;
 			font-family: $ff;
 			font-size: 16px;
-			font-weight: 500;
+			font-weight: 400;
 			color: $bl;
 			line-height: $lh5;
 			filter: drop-shadow(0 0 0 #fff);
@@ -57,6 +57,41 @@
 				bottom: -12px;
 				z-index: 1;
 			}
+		}
+	}
+	&-select {
+		position: relative;
+		&:after {
+			content: "";
+			width: 24px;
+			height: 24px;
+			background: url("../images/arrow-down.svg") center no-repeat;
+			position: absolute;
+			top: 50%;
+			right: 15px;
+			z-index: 1;
+			transform: translateY(-50%);
+			z-index: 1;
+			pointer-events: none;
+		}
+		select {
+			display: block;
+			width: 100%;
+			padding: 11px 45px 11px 15px;
+			border-radius: 5px;
+			border: 1px solid $d-lgray;
+			box-shadow: none;
+			font-family: $ff;
+			font-size: 16px;
+			font-weight: 400;
+			color: $bl;
+			line-height: $lh5;
+			filter: drop-shadow(0 0 0 #fff);
+			appearance:none;
+			cursor: pointer;
+		}
+		option {
+			color: $bl;
 		}
 	}
 	&-range {
@@ -153,6 +188,200 @@
 				}
 			}
 		}
+		&_agree {
+			margin-top: 15px;
+			max-width: 100%;
+			.form-check__description {
+				font-size: 12px;
+			}
+		}
+	}
+	&-radio {
+		label {
+			display: flex;
+			padding: 18px 30px;
+			align-items: center;
+			justify-content: space-between;
+			border: 1px solid $d-lgray;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+		input {
+			display: none;
+			&:checked + label {
+				.form-radio__box {
+					border-color: $brown;
+					&:after {
+						opacity: 1;
+					}
+				}
+			}
+		}
+		&__desc {
+			font-family: $ff;
+			font-size: 16px;
+			font-weight: 400;
+			color: $lbl;
+			line-height: $lh5;
+			margin-right: 30px;
+		}
+		&__box {
+			width: 20px;
+			height: 20px;
+			flex: 0 0 20px;
+			border-radius: 50%;
+			border: 1px solid $d-lgray;
+			background-color: $f-gray;
+			position: relative;
+			transition: all .2s linear;
+			&:after {
+				content: "";
+				width: 10px;
+				height: 10px;
+				background-color: $brown;
+				border-radius: 50%;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				z-index: 1;
+				opacity: 0;
+				transition: all .2s linear;
+			}
+		}
+	}
+	&__radioblock {
+		display: flex;
+		flex-wrap: wrap;
+		margin-left: -20px;
+		margin-bottom: -10px;
+		>* {
+			margin-left: 20px;
+			margin-bottom: 10px;
+			min-width: 27.55%;
+		}
+	}
+	&__description {
+		font-family: $ff;
+		font-size: 14px;
+		font-weight: 500;
+		color: $gray;
+		line-height: $lh;
+		margin-bottom: 5px;
+		span {
+			color: $red2;
+			vertical-align: top;
+		}
+	}
+	&__row {
+		display: flex;
+		flex-wrap: wrap;
+		margin-left: -30px;
+		margin-bottom: -20px;
+		>* {
+			width: calc(50% - 30px);
+			margin-left: 30px;
+			margin-bottom: 20px;
+		}
+	}
+	&__item {
+		margin-bottom: 20px;
+	}
+	&-choice {
+		&__item {
+			position: relative;
+			margin-bottom: 15px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+		label {
+			display: flex;
+			width: 100%;
+			align-items: center;
+			border: 1px solid $d-lgray;
+			border-radius: 5px;
+			padding: 14px 85px 14px 20px;
+			background-color: $wh;
+			cursor: pointer;
+		}
+		&__box {
+			width: 20px;
+			height: 20px;
+			flex: 0 0 20px;
+			border-radius: 50%;
+			border: 1px solid $d-lgray;
+			background-color: $f-gray;
+			position: relative;
+			transition: all .2s linear;
+			margin-right: 15px;
+			&:after {
+				content: "";
+				width: 10px;
+				height: 10px;
+				background-color: $brown;
+				border-radius: 50%;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				z-index: 1;
+				opacity: 0;
+				transition: all .2s linear;
+			}
+		}
+		&__text {
+			font-family: $ff;
+			font-size: 14px;
+			font-weight: 500;
+			color: $gray2;
+			line-height: $lh;
+			transition: all .2s linear;
+		}
+		input {
+			display: none;
+			&:checked + label {
+				.form-choice__box {
+					border-color: $brown;
+					&:after {
+						opacity: 1;
+					}
+				}
+				.form-choice__text {
+					color: $brown;
+				}
+			}
+		}
+		&__btns {
+			display: flex;
+			position: absolute;
+			top: 50%;
+			right: 20px;
+			z-index: 1;
+			transform: translateY(-50%);
+		}
+		&__btn {
+			display: inline-block;
+			margin-right: 15px;
+			svg {
+				width: 20px;
+				height: 20px;
+				fill: none;
+				stroke: $gray2;
+				transition: all .2s linear;
+			}
+			&:hover {
+				svg {
+					stroke: $brown;
+				}
+			}
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+		.btn-transparent {
+			width: 100%;
+		}
 	}
 }
 /*==========/form===========*/
@@ -229,6 +458,53 @@
 /*=========/sort===========*/
 
 /*===========Adaptive========*/
+@media(max-width: 546px) {
+	.form {
+		&-choice {
+			label {
+				padding: 10px 80px 10px 15px;
+			}
+		}
+		&__row {
+			margin-left: 0;
+			margin-bottom: -15px;
+			>* {
+				width: 100%;
+				margin-left: 0;
+				margin-bottom: 15px;
+			}
+		}
+		&__item {
+			margin-bottom: 15px;
+		}
+		&-input {
+			input {
+				font-size: 14px;
+			}
+		}
+		&-select {
+			select {
+				font-size: 14px;
+			}
+		}
+		&-radio {
+			label {
+				padding: 15px 20px;
+			}
+			&__desc {
+				font-size: 14px;
+				margin-right: 15px;
+			}
+		}
+		&__radioblock {
+			>* {
+				width: 100%;
+				margin-right: 0;
+			}
+		}
+	}
+}
+
 @media(max-width: 414px) {
 	.subscribe {
 		.btn {

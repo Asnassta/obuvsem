@@ -61,6 +61,22 @@ $(document).ready(function() {
   });
  /*=========/reviews=========*/
 
+   /*===============Popup=================*/
+    $(".open-popup").on("click", function (event) {
+        name_pop = $(this).attr('data-popup');
+        event.preventDefault();
+        $(".popup."+name_pop).fadeIn(111);
+        $(".popup."+name_pop+" .popup__inner").fadeIn(111);
+        $('body').addClass("hidden");
+    });
+    $(".popup__close,  .closex").on("click", function (event) {
+        event.preventDefault();
+        $(".popup").fadeOut('111');
+        $(".popup__inner").fadeOut(111);
+        $('body').removeClass("hidden");
+    });
+  /*==============/popup=================*/
+
  /*===========Range=============*/
     $( "#slider-range_price" ).slider({
       range: true,
