@@ -15,6 +15,7 @@
 			line-height: $lh5;
 			filter: drop-shadow(0 0 0 #fff);
 			appearance:none;
+			transition: al .2s linear;
 			&::placeholder {
 				color: $gray2;
 				font-weight: 400;
@@ -38,6 +39,13 @@
 				line-height: $lh5;
 			}
 		}
+		/*@media(min-width: 1025px) {
+			&:hover {
+				input {
+					border-color: #9B9C9E;
+				}
+			}
+		}*/
 		&.error {
 			position: relative;
 			padding-bottom: 10px;
@@ -205,6 +213,14 @@
 			border: 1px solid $d-lgray;
 			border-radius: 5px;
 			cursor: pointer;
+			transition: all .2s linear;
+		}
+		@media(min-width: 1025px) {
+			&:hover {
+				label {
+					border-color: $brown;
+				}
+			}
 		}
 		input {
 			display: none;
@@ -230,7 +246,7 @@
 			height: 20px;
 			flex: 0 0 20px;
 			border-radius: 50%;
-			border: 1px solid $d-lgray;
+			border: 2px solid $d-lgray;
 			background-color: $f-gray;
 			position: relative;
 			transition: all .2s linear;
@@ -247,6 +263,25 @@
 				z-index: 1;
 				opacity: 0;
 				transition: all .2s linear;
+			}
+		}
+		&.error {
+			label {
+				border-color: $red2;
+			}
+			.form-radio__desc {
+				color: $red2;
+			}
+			.form-radio__box {
+				border-color: $red2;
+			}
+			input:checked + label {
+				.form-radio__box {
+					border-color: $red2;
+					&:after {
+						background-color: $red2;
+					}
+				}
 			}
 		}
 	}
@@ -294,6 +329,13 @@
 			&:last-child {
 				margin-bottom: 0;
 			}
+			@media(min-width: 1025px) {
+				&:hover {
+					label {
+						border-color: $brown;
+					}
+				}
+			}
 		}
 		label {
 			display: flex;
@@ -304,13 +346,14 @@
 			padding: 14px 85px 14px 20px;
 			background-color: $wh;
 			cursor: pointer;
+			transition: all .2s linear;
 		}
 		&__box {
 			width: 20px;
 			height: 20px;
 			flex: 0 0 20px;
 			border-radius: 50%;
-			border: 1px solid $d-lgray;
+			border: 2px solid $d-lgray;
 			background-color: $f-gray;
 			position: relative;
 			transition: all .2s linear;
