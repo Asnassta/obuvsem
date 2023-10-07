@@ -995,7 +995,7 @@
     font-family: "Montserrat", sans-serif;
     font-size: 14px;
     font-weight: 600;
-    color: #785549;
+    color: #785549 !important;
     line-height: 1.428; }
   .table__info {
     font-family: "Montserrat", sans-serif;
@@ -2824,6 +2824,8 @@
       height: 24px; }
   .popup__content {
     padding: 30px; }
+  .popup-order .popup__content {
+    padding: 30px 20px 100px; }
   .popup-order .product-cart__item {
     padding: 20px; }
   .popup-order .product-cart__description {
