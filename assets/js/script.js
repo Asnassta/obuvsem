@@ -77,6 +77,21 @@ $(document).ready(function() {
     });
   /*==============/popup=================*/
 
+      /*=========Form (password)========*/
+    $(".form__show").on("click", function () {
+        $(this).toggleClass("active");
+        if ($(this).hasClass('active')) {
+
+            $(this).parent().find('input').attr('type', 'text');
+
+        } else {
+
+            $(this).parent().find('input').attr('type', 'password');
+
+        }
+    });
+    /*=========/form (password)========*/
+
  /*===========Range=============*/
     $( "#slider-range_price" ).slider({
       range: true,

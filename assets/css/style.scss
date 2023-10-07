@@ -357,6 +357,28 @@ body.hidden {
 	}
 }
 
+.btn-back {
+	display: none;
+	align-items: center;
+	margin: 20px 0;
+	svg {
+		width: 20px;
+		height: 20px;
+		flex: 0 0 20px;
+		margin-right: 5px;
+		fill: none;
+		stroke: $gray3;
+		transform: rotate(180deg);
+	}
+	span {
+		font-family: $ff;
+		font-size: 14px;
+		font-weight: 400;
+		color: $gray2;
+		line-height: $lh;
+	}
+}
+
 .btn-green {
 	display: inline-flex;
 	background: linear-gradient(0deg, rgba(72, 165, 29, 0.15) 0%, rgba(72, 165, 29, 0.15) 100%), #FFF;
@@ -1039,6 +1061,14 @@ body.hidden {
 			&_sum {
 				font-size: 20px;
 			}
+		}
+		&__description {
+			font-family: $ff;
+			font-size: 14px;
+			font-weight: 500;
+			color: $gray2;
+			line-height: $lh;
+			display: none;
 		}
 		&__btns {
 			display: flex;
@@ -2038,6 +2068,12 @@ body.hidden {
 	}
 	.breadcrumbs {
 		margin: 20px 0;
+		&.mobile-none {
+			display: none;
+		}
+	}
+	.btn-back {
+		display: inline-flex;
 	}
 	.arrows-rect {
 		&__arrow {
