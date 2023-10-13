@@ -253,7 +253,7 @@
 									<img src="assets/images/logo.png" alt="">
 								</a>
 							</div>
-							<div class="header__loc">
+							<div class="header__loc open-popup" data-popup="popup-location">
 								<svg>
 									<use xlink:href="#pin-icon"></use>
 								</svg>
@@ -273,7 +273,7 @@
 								</svg>
 								<span>8 (913) 909-86-31</span>
 							</a>
-							<a href="#" class="btn-green">
+							<a href="#" class="btn-green open-popup" data-popup="popup-cooperation">
 								<svg>
 									<use xlink:href="#list-check-icon"></use>
 								</svg>
@@ -485,7 +485,7 @@
 			</div>
 			<div class="mobile-menu">
 				<div class="mobile-menu__inner">
-					<div class="header__loc">
+					<div class="header__loc open-popup" data-popup="popup-location">
 						<svg>
 							<use xlink:href="#pin-icon"></use>
 						</svg>
@@ -504,7 +504,7 @@
 							</svg>
 							<span>8 (913) 909-86-31</span>
 						</a>
-						<a href="#" class="btn-green">
+						<a href="#" class="btn-green open-popup" data-popup="popup-cooperation">
 							<svg>
 								<use xlink:href="#list-check-icon"></use>
 							</svg>
@@ -807,6 +807,128 @@
 				</a>
 			</div>
 		</div><!--/menu-foot-->
+
+		<div class="popup popup-cooperation">
+			<div class="closex"></div>
+			<div class="popup__inner">
+				<span class="popup__close">
+					<svg>
+						<use xlink:href="#close-icon"></use>
+					</svg>
+				</span>
+				<div class="popup__box">
+					<div class="popup__content">
+						<form action="#" class="form">
+							<h3 class="popup__title">Заявка на сотрудничество</h3>
+							<div class="form__item">
+								<div class="form__description">Название компании <span>*</span></div>
+								<div class="form-input">
+									<input type="text" placeholder="Название компании">
+								</div>
+							</div><!--/form__item-->
+							<div class="form__item">
+								<div class="form__description">ФИО контактного лица <span>*</span></div>
+								<div class="form-input">
+									<input type="text" placeholder="ФИО">
+								</div>
+							</div><!--/form__item-->
+							<div class="form__item">
+								<div class="form__description">Телефон <span>*</span></div>
+								<div class="form-input">
+									<input type="text" placeholder="+7 (___) ___-__-__">
+								</div>
+							</div><!--/form__item-->
+							<div class="form__item">
+								<div class="form__description">E-mail <span>*</span></div>
+								<div class="form-input">
+									<input type="text" placeholder="E-mail">
+								</div>
+							</div><!--/form__item-->
+							<button type="submit" class="btn">Оставить заявку</button>
+						</form><!--/form-->
+					</div>
+	    	    </div>
+			</div>
+		</div><!--/popup-cooperation-->
+
+		<div class="popup popup-location">
+			<div class="closex"></div>
+			<div class="popup__inner">
+				<span class="popup__close">
+					<svg>
+						<use xlink:href="#close-icon"></use>
+					</svg>
+				</span>
+				<div class="popup__box">
+					<div class="popup__content">
+						<h3 class="title-small mb-20">Выберите свой город</h3>
+						<form action="#" class="search">
+							<input type="text" placeholder="Введите город">
+							<button>
+								<svg>
+									<use xlink:href="#search-icon"></use>
+								</svg>
+							</button>
+						</form>
+						<div class="location">
+							<div class="location__list">
+								<ul class="location__col">
+									<li>Барнаул</li>
+									<li>Брянск</li>
+									<li>Владимир</li>
+									<li>Волгоград</li>
+									<li>Волжск</li>
+									<li>Вологда</li>
+									<li>Воронеж</li>
+									<li>Димитровград</li>
+									<li>Дмитров</li>
+									<li>Екатеринбург</li>
+									<li>Ижевск</li>
+									<li>Йошкар-Ола</li>
+									<li>Казань</li>
+									<li>Кемерово</li>
+									<li>Киров</li>
+								</ul>
+								<ul class="location__col">
+									<li>Краснодар</li>
+									<li>Красноярск</li>
+									<li>Курск</li>
+									<li>Липецк</li>
+									<li>Москва</li>
+									<li>Набережные Челны</li>
+									<li class="checked">Нижний Новгород</li>
+									<li>Новосибирск</li>
+									<li>Омск</li>
+									<li>Оренбург</li>
+									<li>Пенза</li>
+									<li>Пермь</li>
+									<li>Ростов-на-Дону</li>
+									<li>Рязань</li>
+									<li>Самара</li>
+								</ul>
+								<ul class="location__col">
+									<li>Санкт-Петербург</li>
+									<li>Саранск</li>
+									<li>Саратов</li>
+									<li>Смоленск</li>
+									<li>Сочи</li>
+									<li>Ставрополь</li>
+									<li>Сыктывкар</li>
+									<li>Тольятти</li>
+									<li>Тула</li>
+									<li>Тюмень</li>
+									<li>Ульяновск</li>
+									<li>Уфа</li>
+									<li>Челябинск</li>
+									<li>Чита</li>
+									<li>Ярославль</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+	    	    </div>
+			</div>
+		</div><!--/popup-location-->
 	</div>
 
 	<script src="assets/js/jquery-3.6.0.min.js"></script>
