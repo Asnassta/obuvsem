@@ -19,12 +19,14 @@
 		display: flex;
 		align-items: center;
 		margin-right: 82px;
+		cursor: pointer;
 		svg {
 			width: 24px;
 			height: 24px;
 			fill: none;
 			stroke: $gray;
 			margin-right: 10px;
+			transition: all .2s linear;
 		}
 		span {
 			font-family: $ff;
@@ -32,6 +34,15 @@
 			font-weight: 400;
 			color: $bl;
 			line-height: 1.428;
+			transition: all .2s linear;
+		}
+		&:hover {
+			span {
+				color: $brown;
+			}
+			svg {
+				stroke: $brown;
+			}
 		}
 	}
 	&__nav {

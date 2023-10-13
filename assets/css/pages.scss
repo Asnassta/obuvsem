@@ -185,6 +185,36 @@
 }
 /*========/page==========*/
 
+/*=========Info=========*/
+.info {
+	&__block {
+		margin-bottom: 30px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	&__header {
+		margin-bottom: 20px;
+		display: flex;
+		align-items: center;
+	}
+	&__icon {
+		width: 52px;
+		height: 52px;
+		flex: 0 0 52px;
+		border-radius: 50%;
+		background: rgba(126, 84, 69, 0.05);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-right: 20px;
+		img {
+			max-width: 95%;
+		}
+	}
+}
+/*=========/info=========*/
+
 /*==========Table========*/
 .table {
 	border: 1px solid $s-gray;
@@ -918,11 +948,156 @@
 }
 /*==========/edit==========*/
 
+/*==========Contact=========*/
+.contact {
+	&__box {
+		display: flex;
+		border: 1px solid $s-gray;
+	}
+	&__col {
+		padding: 40px;
+		border-right: 1px solid $s-gray;
+		width: 50%;
+		&:last-child {
+			border-right: none;
+		}
+	}
+	&__block {
+		margin-bottom: 30px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	&__title {
+		font-family: $ff;
+		font-size: 16px;
+		font-weight: 700;
+		color: #15191C;
+		line-height: 1.5;
+		margin-bottom: 20px;
+	}
+	&__item {
+		display: flex;
+		align-items: flex-start;
+		margin-bottom: 10px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	&__icon {
+		margin-right: 10px;
+	}
+	&__description {
+		font-family: $ff;
+		font-size: 14px;
+		font-weight: 400;
+		color: $gray;
+		line-height: $lh;
+	}
+	&__data {
+		font-family: $ff;
+		font-size: 16px;
+		font-weight: 500;
+		color: $bl;
+		line-height: $lh5;
+	}
+}
+/*==========/contact=========*/
+
+/*===========Map==========*/
+.map {
+	&__content {
+		width: 100%;
+		height: 500px;
+	}
+}
+/*===========/map==========*/
+
+/*=========Advantages===========*/
+.advantages {
+	background-color: $f-gray;
+	padding: 60px 0;
+	.title {
+		text-align: center;
+		margin-bottom: 30px;
+	}
+	&__box {
+		background-color: $wh;
+		padding: 40px 30px;
+		border-radius: 10px;
+		box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.05);
+	}
+	&__inner {
+		display: flex;
+		flex-wrap: wrap;
+		margin-left: -40px;
+		margin-bottom: -40px;
+		>* {
+			width: calc(16.66666% - 40px);
+			margin-left: 40px;
+			margin-bottom: 40px;
+		}
+	}
+	&__item {
+		text-align: center;
+	}
+	&__icon {
+		margin-bottom: 15px;
+		img {
+			width: 64px;
+		}
+	}
+	&__info {
+		font-family: $ff;
+		font-size: 16px;
+		font-weight: 600;
+		line-height: $lh5;
+		color: $bl;
+	}
+}
+/*=========/advantages===========*/
+
+/*==========Location===========*/
+.location {
+	margin-top: 30px;
+	&__list {
+		display: flex;
+		margin-left: -75px;
+	}
+	&__col {
+		margin-left: 75px;
+	}
+	li {
+		cursor: pointer;
+		margin-bottom: 10px;
+		font-family: $ff;
+		font-size: 14px;
+		font-weight: 400;
+		color: $lbl;
+		line-height: $lh;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		&.checked {
+			color: $brown;
+			font-weight: 600;
+		}
+	}
+}
+/*==========/location===========*/
+
 
 /*========Adaptive=======*/
 @media(max-width: 1200px) {
 	.view {
 		display: none;
+	}
+	.advantages {
+		&__inner {
+			>* {
+				width: calc(33.33333% - 40px);
+			}
+		}
 	}
 	.table {
 		&__header {
@@ -1063,6 +1238,20 @@
 			}
 		}
 	}
+	.contact {
+		&__col {
+			padding: 30px;
+		}
+	}
+
+	.map {
+		.container {
+			padding: 0;
+		}
+		&__content {
+			height: 450px;
+		}
+	}
 }
 
 @media(max-width: 760px) {
@@ -1094,6 +1283,40 @@
 		}
 	}
 
+	.location {
+		max-height: 290px;
+		overflow-y: auto;
+		padding-right: 10px;
+		&__list {
+			margin-left: -25px;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+		&__col {
+			margin-left: 25px;
+			margin-bottom: 10px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	.contact {
+		&__box {
+			display: block;
+		}
+		&__col {
+			width: 100%;
+			border-right: none;
+			border-bottom: 1px solid $s-gray;
+			&:last-child {
+				border-bottom: none;
+			}
+		}
+	}
+
+
+
 	.table {
 		&__box {
 			margin-bottom: -20px;
@@ -1110,6 +1333,14 @@
 					margin-right: 0;
 					margin-bottom: 15px;
 				}
+			}
+		}
+	}
+
+	.advantages {
+		&__inner {
+			>* {
+				width: calc(50% - 40px);
 			}
 		}
 	}
@@ -1138,6 +1369,19 @@
 }
 
 @media(max-width: 546px) {
+	.advantages {
+		padding: 50px 0;
+		.title {
+			font-weight: 700;
+		}
+		&__inner {
+			margin-left: 0;
+			>* {
+				width: 100%;
+				margin-left: 0;
+			}
+		}
+	}
 	.order {
 		&__box {
 			padding: 25px;

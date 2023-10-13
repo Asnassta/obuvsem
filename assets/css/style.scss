@@ -134,6 +134,10 @@ body.hidden {
 	margin-bottom: 20px;
 }
 
+.mb-30 {
+	margin-bottom: 30px;
+}
+
 .mb-40 {
 	margin-bottom: 40px;
 }
@@ -184,6 +188,22 @@ body.hidden {
 	}
 }
 
+.title-small {
+	font-family: $ff;
+	font-size: 18px;
+	font-weight: 700;
+	color: $bl;
+	line-height: 1.44;
+}
+
+.title-min {
+	font-family: $ff;
+	font-size: 16px;
+	font-weight: 600;
+	color: $bl;
+	line-height: 1.5;
+}
+
 .subtitle {
 	font-family: $ff;
 	font-size: 18px;
@@ -206,6 +226,54 @@ body.hidden {
 		margin-bottom: 25px;
 		&:last-child {
 			margin-bottom: 0;
+		}
+	}
+	.bold {
+		font-weight: 600;
+	}
+	&_medium {
+		font-weight: 500;
+		.bold {
+			font-weight: 700;
+		}
+		p {
+			margin-bottom: 30px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+.list {
+	margin-top: 20px;
+		&:first-child {
+			margin-top: 0;
+		}
+	ul {
+		margin-top: 10px;
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+	li {
+		padding-left: 22px;
+		position: relative;
+		font-family: $ff;
+		font-size: 16px;
+		font-weight: 400;
+		color: $bl;
+		line-height: $lh5;
+		&:before {
+			content: "";
+			width: 2px;
+			height: 2px;
+			background-color: $bl;
+			border-radius: 50%;
+			position: absolute;
+			top: 10px;;
+			left: 10px;
+			z-index: 1;
 		}
 	}
 }
@@ -2071,6 +2139,9 @@ body.hidden {
 		&.mobile-none {
 			display: none;
 		}
+	}
+	.mb-30 {
+		margin-bottom: 20px;
 	}
 	.btn-back {
 		display: inline-flex;

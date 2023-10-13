@@ -51,7 +51,7 @@
 		background-color: $wh; 
 		max-height: calc(100vh - 200px);
 		border-radius: 8px;
-		overflow-x: auto;
+		overflow-y: auto;
 	}
 	&.show {
 		visibility: visible;
@@ -152,6 +152,33 @@
 			}
 		}
 	}
+	&-location {
+		* {
+		  scrollbar-width: thin;
+		  scrollbar-color: $brown #EFF0F2;
+		}
+		*::-webkit-scrollbar {
+		  height: 4px;
+		  width: 4px;
+		  border-radius: 5px;
+		}
+		*::-webkit-scrollbar-track {
+		  background: #EFF0F2;
+		}
+		*::-webkit-scrollbar-thumb {
+		  background-color: $brown;
+		  border-radius: 27px;
+		  border: 3px solid $brown;
+		}
+		.popup {
+			&__inner {
+				max-width: 600px;
+			}
+			&__content {
+				padding: 30px;
+			}
+		}
+	}
 }
 /*============/popup==========*/
 
@@ -213,6 +240,12 @@
 						margin-bottom: 0;
 					}
 				}
+			}
+		}
+		&-location {
+			.popup__inner {
+				top: 50%;
+				transform: translate(-50%, -50%);
 			}
 		}
 	}
